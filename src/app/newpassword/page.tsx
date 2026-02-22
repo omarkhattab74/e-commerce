@@ -67,7 +67,7 @@ export default function Newpassword() {
   }
 
   return (
-    <div className="w-[50%] mx-auto shadow-2xl rounded-2xl my-10">
+    <div className="md:w-[50%] w-full mx-auto shadow-2xl rounded-2xl my-10">
       <Card className="w-full p-7 ">
         <CardHeader>
           <h2 className="font-semibold text-2xl">Reset Password :</h2>
