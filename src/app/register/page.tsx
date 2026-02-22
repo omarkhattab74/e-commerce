@@ -52,7 +52,7 @@ export default function Register() {
 
   return (
     <>
-      <div className='w-1/2 mx-auto shadow-2xl my-10 p-4 rounded-2xl'>
+      <div className='md:w-1/2 w-full mx-auto shadow-2xl my-10 p-4 rounded-2xl'>
         <h2 className='font-semibold text-2xl my-4'>Register Now :</h2>
         <form onSubmit={handleSubmit(handleForm)}>
           <FieldGroup className='my-5'>
