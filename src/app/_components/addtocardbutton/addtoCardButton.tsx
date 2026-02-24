@@ -30,10 +30,10 @@ export default function AddtoCardButton({ productid }: { productid: string }) {
           position: "top-center"
         })
         console.log("error");
-        setLoading(false)
-
-
+        
+        
       }
+      setLoading(false)
     } else {
       toast.error("You Must Login First", {
         position: "top-center"

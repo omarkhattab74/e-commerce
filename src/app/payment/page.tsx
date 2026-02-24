@@ -245,7 +245,7 @@ export default function Payment() {
 
 
                 <Button type="submit" form="form-rhf-input" className='w-full bg-green-400 hover:bg-green-500'>
-                    Send
+                    Pay Now
                 </Button>
             </form>
 
