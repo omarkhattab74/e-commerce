@@ -1,6 +1,7 @@
 import { getPrudectDetails } from '@/app/apis/productdetails';
 
 import AddtoCardButton from './../../_components/addtocardbutton/addtoCardButton';
+import CustomLoading from '@/app/_components/customLoading/customLoading';
 
 export default async function Details({ params }: {params: { details: string } }) {
   const { details } = await params
@@ -10,7 +11,7 @@ export default async function Details({ params }: {params: { details: string } }
 
   return (
     <>
-      <div className="container  mx-auto flex flex-wrap items-center  mt-5">
+    {!data ? CustomLoading :  <div className="container  mx-auto flex flex-wrap items-center  mt-5">
         <div className='w-full md:w-1/4 p-5'>
           <img src={data.imageCover} alt="" />
         </div>
@@ -24,7 +25,8 @@ export default async function Details({ params }: {params: { details: string } }
           </div>
           <AddtoCardButton productid={data._id} />
         </div>
-      </div>
+      </div>}
+     
     </>
   )
 }

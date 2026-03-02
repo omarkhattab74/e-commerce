@@ -3,6 +3,7 @@ import Image from 'next/image';
 import testImg from "../../../public/images/img2.jpg"
 import getUserOrders from '../apis/getUserOrders';
 import { singleOrder } from '@/interfaces/ordersinterface';
+import CustomLoading from '../_components/customLoading/customLoading';
 
 
 export default async function Allorders() {
@@ -11,7 +12,8 @@ export default async function Allorders() {
 
 
     return (
-        <div className=' p-7'>
+        <>
+        {data.length === 0 ? <CustomLoading/> : <div className=' p-7'>
             <h2 className='text-2xl font-bold'>My orders :</h2>
 
             {data?.map((order: singleOrder) =>
@@ -79,6 +81,8 @@ export default async function Allorders() {
 
 
 
-        </div>
+        </div> }
+        
+        </>
     )
 }

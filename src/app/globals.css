@@ -120,45 +120,47 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
     background-color: rgb(241, 241, 241);
   }
 }
 
-.swiper-pagination{
-  position: static !important; 
+.swiper-pagination {
+  position: static !important;
 }
 
 .loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid #FFF;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-    }
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
 
-    @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-    } 
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 
-/* From Uiverse.io by Donewenfu */ 
+/* From Uiverse.io by Donewenfu */
 .loaderr {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  
+
 }
 
 .jimu-primary-loading:before,
@@ -252,24 +254,61 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .loader-spin {
-    width: 15px;
-    height: 15px;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-    }
+  width: 15px;
+  height: 15px;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
 
-    @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-    } 
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.loading-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(135deg, #54eed0, #85ead6); */
+  /* background-color: rgb(185, 255, 185); */
+}
+
+.logo {
+  font-size: clamp(32px, 6vw, 70px);
+  font-weight: 800;
+  color: rgb(106, 106, 106);
+  /* color: #fff; */
+  letter-spacing: 4px;
+  animation: fadeEffect 2s ease-in-out infinite;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes fadeEffect {
+  0% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}

@@ -17,6 +17,7 @@ import AddtoCardButton from '../_components/addtocardbutton/addtoCardButton'
 import WishlistButton from '../_components/addToWishList/wishlistButton'
 import { wishContext } from '@/wishlistContext/wishlistContext'
 import { data } from '@/interfaces/wishlistInterface'
+import CustomLoading from './../_components/customLoading/customLoading';
 
 
 export default function Products() {
@@ -45,7 +46,7 @@ export default function Products() {
 
   return (
     <>
-      <div className='flex flex-wrap container mx-auto md:w-[80%]'>
+    {products.length ===0 ?<CustomLoading/> :  <div className='flex flex-wrap container mx-auto md:w-[80%]'>
         {products?.map((product: product) => {
           return <div key={product.id} className='w-full p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5'>
             <Card className='px-3'>
@@ -75,7 +76,9 @@ export default function Products() {
 
           </div>
         })}
-      </div>
+      </div>}
+    
+     
     </>
   )
 }

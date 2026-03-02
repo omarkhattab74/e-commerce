@@ -22,6 +22,7 @@ import { toast } from 'sonner'
 import { wishContext } from '@/wishlistContext/wishlistContext'
 import { string } from 'zod'
 import { Wishlist } from '@/interfaces/wishlistInterface'
+import CustomLoading from '../_components/customLoading/customLoading'
 
 export default function Washlist() {
   const [data, setData] = useState<Wishlist | null>(null)
@@ -63,8 +64,7 @@ export default function Washlist() {
   return (
 
     <>
-
-      <div className='container w-[80%] mx-auto my-10'>
+    {!data ? <CustomLoading/> : <div className='container w-[80%] mx-auto my-10'>
 
         <h1 className='text-2xl font-bold mb-7'>Wishlist :</h1>
 
@@ -105,7 +105,9 @@ export default function Washlist() {
           )}
         </div>
 
-      </div>
+      </div>}
+
+     
 
     </>
 
