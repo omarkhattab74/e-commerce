@@ -29,7 +29,11 @@ export default function BrandProducts({ params }:{params : {brandProducts : stri
     }
 
     useEffect(() => {
-        getBrandProduct()
+        function flag() {
+            
+            getBrandProduct()
+        }
+        flag()
 
     }, [])
 

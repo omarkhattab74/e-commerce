@@ -29,7 +29,11 @@ export default function Categoryproducts({ params } :{params :{categoryProducts 
     }
 
     useEffect(() => {
-        getCategoryProductss()
+        function flag() {
+            
+            getCategoryProductss()
+        }
+        flag()
     }, [])
 
 

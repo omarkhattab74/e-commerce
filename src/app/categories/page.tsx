@@ -25,7 +25,11 @@ export default function Categories() {
     console.log(data);
   }
   useEffect(() => {
-    getCategories()
+    function flag() {
+      
+      getCategories()
+    }
+    flag()
   }, [])
 
 
@@ -35,7 +39,7 @@ export default function Categories() {
         <h2 className="font-bold text-2xl mb-3">All Categories:</h2>
         <div className='flex  flex-wrap'>
           {categories.map((category : category) =>
-            <div className='p-3 w-1/2 h-[223px] md:w-1/3 lg:w-[25%]'>
+            <div key={category._id} className='p-3 w-1/2 h-[223px] md:w-1/3 lg:w-[25%]'>
              <Link href={`/categories/${category._id}`}>
               <div key={category._id} className='w-full hover:border-green-500 hover:border-5 delay-100 cursor-pointer h-full border border-4 rounded border-green-400'>
                 <Image className='w-full md:h-[160px] h-[calc(100%-23px)]' src={category.image} width={300} height={300} alt={category.name} />

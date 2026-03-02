@@ -24,7 +24,12 @@ export default  function Brands() {
   }
 
   useEffect(()=>{
-    getBrands()
+    function flag() {
+      
+      getBrands()
+    }
+
+    flag()
   },[])
 
 
@@ -34,7 +39,7 @@ export default  function Brands() {
         <h2 className="font-bold text-2xl mb-3">All Brands:</h2>
         <div className='flex  flex-wrap'>
           {brands.map((brand :brand) =>
-            <div className='p-3 w-1/2 h-[223px] md:w-1/3 lg:w-[25%]'>
+            <div key={brand._id} className='p-3 w-1/2 h-[223px] md:w-1/3 lg:w-[25%]'>
              <Link href={`/brands/${brand._id}`}>
               <div key={brand._id} className='w-full hover:border-green-500 hover:border-5 delay-100 cursor-pointer h-full border border-4 rounded border-green-400'>
                 <Image className='w-full md:h-[160px] h-[calc(100%-23px)]' src={brand.image} width={300} height={300} alt={brand.name} />

@@ -21,7 +21,11 @@ export default  function WishlistContextprovider({children}:{children:React.Reac
     }
 
     useEffect(()=>{
+      function flag() {
+        
         getWish()
+      }
+      flag()
     },[])
 
     

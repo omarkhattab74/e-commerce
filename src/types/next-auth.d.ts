@@ -39,32 +39,32 @@ import NextAuth, { DefaultSession } from "next-auth";
 
 declare module "next-auth" {
 
-  // interface user {
+  interface user {
 
 
-  //   user : {
-  //       role: string,
-  //       email : string,
-  //       name: string
-  //   },
-  //   token : string,
-  // }
+    user : {
+        role: string,
+        email : string,
+        name: string
+    },
+    token : string,
+  }
 
 
   interface Session {
-    user: any;
+    user: user;
     token?: string;
   }
 
   interface User {
-    user: any;
+    user: user;
     token: string;
   }
 }
 
 declare module "next-auth/jwt" {
   interface JWT {
-    user?: any;
+    user?: user;
     token?: string;
   }
 }
