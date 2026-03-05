@@ -25,25 +25,6 @@ NextAuth.js : Authentication & session management
 shadcn/ui : Accessible, reusable UI components
 Vercel : Hosting & continuous deployment
 
-
- Project Structure
-e-commerce/
-├── public/              # Static assets (images, icons)
-├── src/
-│   ├── app/             # Next.js App Router pages & layouts
-│   │   ├── (auth)/      # Login & Register pages
-│   │   ├── products/    # Products listing & detail pages
-│   │   ├── categories/  # Categories page
-│   │   ├── brands/      # Brands page
-│   │   └── layout.tsx   # Root layout
-│   ├── components/      # Reusable UI components
-│   └── lib/             # Utility functions & helpers
-├── auth.ts              # NextAuth configuration
-├── next.config.ts       # Next.js configuration
-├── tailwind.config.ts   # Tailwind CSS configuration
-└── tsconfig.json        # TypeScript configuration
-
-
  Getting Started
 Installation
 # 1. Clone the repository
@@ -62,13 +43,12 @@ Environment Variables
 Create a .env.local file in the root directory:
 
 Available Scripts
-npm run dev       # Start development server
-npm run build     # Build for production
-npm run start     # Start production server
-npm run lint      # Run ESLint
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run start        # Start production server
+npm run lint         # Run ESLint
 
  Deployment
 This project is deployed on Vercel with automatic deployments on every push to master.
-npm run build     # Build for production
 npm run start     # Start production server
 npm run lint      # Run ESLint
